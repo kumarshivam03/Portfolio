@@ -73,7 +73,7 @@ const Hero = () => {
         Full Stack Developer AI Enthusiast Problem Solver
       </motion.div>
       <div className="imageContainer">
-        <img src="hero.png" alt="#" />
+        <img id="img" src="file.png" alt="#" />
       </div>
     </div>
   );
