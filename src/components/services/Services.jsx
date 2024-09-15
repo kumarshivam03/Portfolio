@@ -30,7 +30,7 @@ const Services = () => {
       animate={isInview && "animate"}
     >
       <motion.div className="textContainer" variants={variants}>
-        <motion.h1 id="services" whileHover={{ color: "orange" }}>
+        <motion.h1 id="services" whileHover={{ color: "rgb(255, 165, 0)" }}>
           Services...
         </motion.h1>
       </motion.div>
@@ -38,12 +38,17 @@ const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique </motion.b>Ideas
+            <motion.b whileHover={{ color: "rgb(255, 165, 0)" }}>
+              Unique{" "}
+            </motion.b>
+            Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
+            <motion.b whileHover={{ color: "rgb(255, 165, 0)" }}>
+              For Your{" "}
+            </motion.b>
             Organisation
           </h1>
           <button>WHAT I DO?</button>
@@ -60,7 +65,13 @@ const Services = () => {
             to tackle complex issues effectively. By breaking down problems into
             manageable components and utilizing a structured approach.
           </p>
-          <button>Go</button>
+          <button
+            onClick={() =>
+              window.open("https://leetcode.com/u/Kshivam3127/", "_blank")
+            }
+          >
+            Go
+          </button>
         </motion.div>
         <motion.div
           className="box"
@@ -72,7 +83,16 @@ const Services = () => {
             aspects of a website or application. It involves using HTML, CSS,
             and JavaScript to build responsive and user-friendly interfaces.
           </p>
-          <button>Go</button>
+          <button
+            onClick={() =>
+              window.open(
+                "https://github.com/kumarshivam03?tab=repositories",
+                "_blank"
+              )
+            }
+          >
+            Go
+          </button>
         </motion.div>
         <motion.div
           className="box"
@@ -84,7 +104,16 @@ const Services = () => {
             database interactions of a web application. It encompasses server
             setup, API development, and data handling to support the frontend.
           </p>
-          <button>Go</button>
+          <button
+            onClick={() =>
+              window.open(
+                "https://github.com/kumarshivam03?tab=repositories",
+                "_blank"
+              )
+            }
+          >
+            Go
+          </button>
         </motion.div>
       </motion.div>
     </motion.div>

@@ -51,10 +51,30 @@ const Hero = () => {
             Problem Solver and Web Developer
           </motion.h1>
           <motion.div className="buttons">
-            <motion.button variants={textVariants}>
-              See the Latest Works
+            <motion.button
+              variants={textVariants}
+              onClick={() =>
+                window.open(
+                  "/KShivamResume.pdf",
+                  "_blank",
+                  "noopener,noreferrer"
+                )
+              }
+            >
+              View Resume
             </motion.button>
-            <motion.button variants={textVariants}>Contact Me</motion.button>
+
+            <motion.button
+              variants={textVariants}
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/KShivamResume.pdf"; // Replace with the correct URL to your resume file
+                link.download = "Kumar_Shivam_Resume.pdf";
+                link.click();
+              }}
+            >
+              Download Resume
+            </motion.button>
           </motion.div>
           <motion.img
             variants={textVariants}
