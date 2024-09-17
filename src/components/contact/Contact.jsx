@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./contact.scss";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-import { useState } from "react";
-
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const variants = {
   initial: {
     y: 500,
@@ -23,24 +23,58 @@ const Contact = () => {
   const formRef = useRef();
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); // To disable button during submission
+  const toastId = useRef(null); // Use ref to avoid toast ID re-creation
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSubmitting(true); // Disable button during submission
+
+    // Show loading toast
+    if (!toastId.current) {
+      toastId.current = toast.info("Loading...", {
+        autoClose: false, // Prevent auto-close during loading
+      });
+    }
 
     emailjs
-      .sendForm("service_6iihpy3", "template_e4c8i5d", formRef.current, {
-        publicKey: "OEJkm5ttZwpR_Rbrh",
-      })
+      .sendForm(
+        "service_6iihpy3",
+        "template_e4c8i5d",
+        formRef.current,
+        "OEJkm5ttZwpR_Rbrh"
+      )
       .then(
         (result) => {
           setSuccess(true);
+          setError(false);
+
+          // Update toast to success
+          toast.update(toastId.current, {
+            render: "Message sent successfully!",
+            type: "success",
+            autoClose: 2000,
+          });
         },
         (error) => {
           setError(true);
+          setSuccess(false);
+
+          // Update toast to error
+          toast.update(toastId.current, {
+            render: "Failed to send message. Please try again.",
+            type: "error",
+            autoClose: 2000,
+          });
           console.log("FAILED...", error.text);
         }
-      );
+      )
+      .finally(() => {
+        setIsSubmitting(false); // Re-enable button after submission
+        toastId.current = null; // Reset toast ID for future use
+      });
   };
+
   return (
     <motion.div
       className="contact"
@@ -67,10 +101,18 @@ const Contact = () => {
         <motion.form ref={formRef} onSubmit={sendEmail}>
           <input type="text" placeholder="Name" required name="name" />
           <input type="email" placeholder="Email" required name="email" />
-          <textarea row={8} placeholder="Message" name="message" />
-          <button>Submit</button>
-          {error && "Error"}
-          {success && "Success"}
+          <textarea rows={8} placeholder="Message" name="message" />
+          <button disabled={isSubmitting}>
+            {isSubmitting ? "Sending..." : "Submit"}
+          </button>
+
+          {/* Optional error/success text inside form */}
+          {error && (
+            <span className="error-message">Error occurred while sending</span>
+          )}
+          {success && (
+            <span className="success-message">Message sent successfully!</span>
+          )}
         </motion.form>
       </div>
     </motion.div>
