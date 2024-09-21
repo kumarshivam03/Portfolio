@@ -1,94 +1,92 @@
-.services{
-    background: linear-gradient(180deg,#0c0c1d,#111132);
+.services {
+    background: linear-gradient(180deg, #0c0c1d, #111132);
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
-    .textContainer{
-        flex: 1;
+  
+    .textContainer {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      margin-left: 1250px;
+      gap: 20px;
+  
+      #services {
+        font-weight: 600;
+        font-size: 50px;
+        color: white;
+        text-align: right;
+        margin-right: 300px;
+      }
+    }
+  
+    .titleContainer {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .title {
         display: flex;
         align-items: center;
-        margin-left: 1250px;
-        gap: 20px;
-
-
-        #services{
-            font-weight: 300;
-            font-size: 50px;
-            color:white;
-            text-align: right;
-            margin-right: 300px;
-
-
+        gap: 50px;
+  
+        img {
+          width: 300px;
+          height: 110px;
+          border-radius: 50px;
+          object-fit: cover;
         }
-        // hr{
-        //     width: 300px;
-        //     border: none;
-        //     border-top:0.5px solid gray ;
-
-        // }
+  
+        h1 {
+          font-size: 80px;
+          font-weight: 100;
+        }
+  
+        
+      }
     }
-
-    .titleContainer{
-        flex: 2;
+  
+    .listContainer {
+      flex: 2;
+      display: flex;
+      max-width: 1366px;
+      margin: auto;
+      margin-bottom: 20px;
+      gap: 40px; // Added gap between boxes
+      
+  
+      .box {
+        padding: 30px;
+        border: 0.5px solid gray;
+        border-radius: 15px; // Added border radius
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
-        .title{
-            display: flex;
-            align-items: center;
-            gap: 50px;
+        justify-content: space-between;
+        transition: transform 0.2s, box-shadow 0.3s; // Smooth transition for hover effect
 
-
-            img{ width: 300px;
-                height: 110px;
-                border-radius: 50px;
-                object-fit: cover;
-            }
-
-            h1{
-                font-size: 80px;
-                font-weight: 100;
-            }
-
-            button{
-                width:150px;
-                height: 70px;
-                border-radius: 50px;
-                background-color: orange;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-            }
+  
+        h2 {
+          margin-bottom: 15px; // Increased gap
         }
-       
+  
+        button {
+          padding: 8px;
+          width: 120px; // Decreased width
+          background-color: rgb(125, 178, 192);
+          border: none;
+          font-weight: 900;
+          cursor: pointer;
+          border-radius: 30px;
+          transition: background-color 0.3s, color 0.3s;
+  
+          &:hover {
+            background-color: rgb(18, 122, 24); // Change color on hover
+            color: white; // Change text color on hover
+          }
+        }
+      }
     }
-    .listContainer{
-        flex: 2;
-        display: flex;
-        max-width: 1366px;
-        margin: auto;
-        margin-bottom: 20px;
-        
-
-        .box{
-            padding: 50px;
-            border: 0.5px solid gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            
-        }
-
-        button{
-            padding: 10px;
-            background-color: orange;
-            border: none;
-            cursor: pointer;
-        }
-
-    }
-}
+  }
+  

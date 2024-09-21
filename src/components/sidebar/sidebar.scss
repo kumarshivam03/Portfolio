@@ -1,47 +1,65 @@
-.sidebar{
+.sidebar {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: white;
     color: black;
-    .bg{
-        z-index: 999;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 200px;//for sidebar
-        background: rgb(151, 150, 165);
-
-
-        .links{
-            position: absolute;
-             width: 100%;
-             height: 100%;
-             display: flex;
-             flex-direction: column;
-             align-items: center;
-             justify-content: center;
-             gap: 20px;
-
-
-            a{
-                font-size: 35px;
-            }
-           
+  
+    .bg {
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 200px; // for sidebar
+      background: rgb(161, 161, 161);
+  
+      .links {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+  
+        a {
+          font-size: 35px;
+          color: black;
+            font-weight: 600;
+          text-decoration: none;
+          padding: 10px 20px; // Add padding for button-like appearance
+          border-radius: 50px; // Make the link look like a rounded button
+          transition: color 0.3s ease, background-color 0.3s ease;
+          
+          &:hover {
+            background-color: #ececec; // Light background on hover
+            color: #333; // Darker text on hover
+          }
+  
+          &.active {
+            background-color: white; // White background for active link
+            color: rgb(39, 32, 234); // Sky blue text for active link
+            border: 1px solid rgb(39,32,234); // Sky blue border around the active link
+          }
         }
+      }
     }
-    button{
-        z-index: 999;
-        width: 50px;
-        height: 50px;
-        border-radius:50%;
-        position: fixed;
-        top: 25px;
-        left: 25px;
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
+  
+    button {
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: fixed;
+      top: 25px;
+      left: 25px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
     }
-}
+  }
+  
+  

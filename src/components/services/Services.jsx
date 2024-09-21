@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import "./services.scss";
-import { color, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const variants = {
   initial: {
@@ -18,9 +18,11 @@ const variants = {
     },
   },
 };
+
 const Services = () => {
   const ref = useRef();
   const isInview = useInView(ref, { margin: "-100px" });
+
   return (
     <motion.div
       className="services"
@@ -51,70 +53,43 @@ const Services = () => {
             </motion.b>
             Organisation
           </h1>
-          <button>WHAT I DO?</button>
         </div>
       </motion.div>
       <motion.div className="listContainer" variants={variants}>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Problem Solver</h2>
-          <p>
-            An adept problem solver leverages analytical thinking and creativity
-            to tackle complex issues effectively. By breaking down problems into
-            manageable components and utilizing a structured approach.
-          </p>
-          <button
-            onClick={() =>
-              window.open("https://leetcode.com/u/Kshivam3127/", "_blank")
-            }
-          >
-            Go
-          </button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Frontend Development</h2>
-          <p>
-            Frontend development focuses on creating the visual and interactive
-            aspects of a website or application. It involves using HTML, CSS,
-            and JavaScript to build responsive and user-friendly interfaces.
-          </p>
-          <button
-            onClick={() =>
-              window.open(
-                "https://github.com/kumarshivam03?tab=repositories",
-                "_blank"
-              )
-            }
-          >
-            Go
-          </button>
-        </motion.div>
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
-          <h2>Backend Development</h2>
-          <p>
-            Backend development involves managing the server-side logic and
-            database interactions of a web application. It encompasses server
-            setup, API development, and data handling to support the frontend.
-          </p>
-          <button
-            onClick={() =>
-              window.open(
-                "https://github.com/kumarshivam03?tab=repositories",
-                "_blank"
-              )
-            }
-          >
-            Go
-          </button>
-        </motion.div>
+        {["Problem Solver", "Frontend Development", "Backend Development"].map(
+          (service, index) => (
+            <motion.div
+              className="box"
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 4px 20px rgba(120, 205, 71, 0.5)", // Blue shadow on hover
+              }}
+              key={service}
+            >
+              <h2>{service}</h2>
+              <p>
+                {index === 0
+                  ? "An adept problem solver leverages analytical thinking and creativity to tackle complex issues effectively. By breaking down problems into manageable components and utilizing a structured approach."
+                  : index === 1
+                  ? "Frontend development focuses on creating the visual and interactive aspects of a website or application. It involves using HTML, CSS, and JavaScript to build responsive and user-friendly interfaces."
+                  : "Backend development involves managing the server-side logic and database interactions of a web application. It encompasses server setup, API development, and data handling to support the frontend."}
+              </p>
+              <button
+                className="goButton"
+                onClick={() =>
+                  window.open(
+                    index === 0
+                      ? "https://leetcode.com/u/Kshivam3127/"
+                      : "https://github.com/kumarshivam03?tab=repositories",
+                    "_blank"
+                  )
+                }
+              >
+                Check My Work
+              </button>
+            </motion.div>
+          )
+        )}
       </motion.div>
     </motion.div>
   );

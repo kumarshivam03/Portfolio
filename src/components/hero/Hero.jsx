@@ -46,9 +46,9 @@ const Hero = () => {
           initial="initial"
           animate="animate"
         >
-          <motion.h2 variants={textVariants}>Kumar Shivam</motion.h2>
+          <motion.h2 variants={textVariants}>Kumar Shivam,</motion.h2>
           <motion.h1 variants={textVariants}>
-            Problem Solver and Web Developer
+            Problem Solver And Full Stack Developer
           </motion.h1>
           <motion.div className="buttons">
             <motion.button
@@ -62,18 +62,6 @@ const Hero = () => {
               }
             >
               View Resume
-            </motion.button>
-
-            <motion.button
-              variants={textVariants}
-              onClick={() => {
-                const link = document.createElement("a");
-                link.href = "/KShivamResume.pdf"; // Replace with the correct URL to your resume file
-                link.download = "Kumar_Shivam_Resume.pdf";
-                link.click();
-              }}
-            >
-              Download Resume
             </motion.button>
           </motion.div>
           <motion.img
@@ -93,7 +81,7 @@ const Hero = () => {
         Full Stack Developer AI Enthusiast Problem Solver
       </motion.div>
       <div className="imageContainer">
-        <img id="img" src="file.png" alt="#" />
+        <img id="img" src="shivam_passport.jpeg" alt="#" />
       </div>
     </div>
   );

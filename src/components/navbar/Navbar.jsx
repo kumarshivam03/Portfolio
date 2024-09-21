@@ -24,12 +24,6 @@ const Navbar = () => {
             <img src="/linkedin.webp" alt="" />
           </a>
           <a
-            href="http://localhost:5173/KShivamResume.pdf"
-            download="Kumar_Shivam_Resume.pdf"
-          >
-            <img src="/cv3.jpeg" id="cv" alt="CV" />
-          </a>
-          <a
             href="https://github.com/kumarshivam03/"
             target="_blank"
             rel="noopener noreferrer"
@@ -43,6 +37,10 @@ const Navbar = () => {
             rel="noopener noreferrer"
           >
             <img src="/twitter.webp" alt="" />
+          </a>
+
+          <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
+            <img src="/instagram.png" alt="" />
           </a>
         </div>
       </div>
