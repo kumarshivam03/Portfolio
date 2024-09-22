@@ -21,13 +21,28 @@
 
       h2 {
         font-size: 50px;
-        color: rgb(100, 18, 181);
-        letter-spacing: 5px;
         font-weight: 900;
+        letter-spacing: 5px;
+        background: linear-gradient(to right, rgb(232, 15, 15), rgb(251, 202, 9), rgb(255, 255, 255));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: colorTransition 1.5s ease infinite; /* Add animation */
+        background-size: 200%; /* Make the gradient bigger for transition */
       }
+      
+      @keyframes colorTransition {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 100%;
+        }
+      }
+      
 
       h1 {
-        font-size: 58px;
+        font-size: 25px;
       }
 
       .buttons {
@@ -42,6 +57,7 @@
           border-radius: 10px;
           background-color: transparent;
           color: white;
+          font-size: 20px;
           cursor: pointer;
           font-weight: 500; /* Increased font weight */
           transition: background-color 0.3s ease, color 0.3s ease;
@@ -75,7 +91,7 @@
       height: 420px; /* Adjusted height */
       border-radius: 50px; /* Rounded box effect */
       object-fit: fill;
-      box-shadow: 0px 4px 15px rgba(42, 16, 209, 0.5); /* Shadow effect */
+      box-shadow: 20px 20px 14px rgba(209, 16, 16, 0.5); /* Shadow effect */
     }
   }
   

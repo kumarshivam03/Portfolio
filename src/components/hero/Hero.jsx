@@ -1,5 +1,6 @@
 import "./hero.scss";
 import { motion } from "framer-motion";
+
 const textVariants = {
   initial: {
     x: -500,
@@ -22,6 +23,7 @@ const textVariants = {
     },
   },
 };
+
 const sliderVariants = {
   initial: {
     x: 0,
@@ -48,7 +50,10 @@ const Hero = () => {
         >
           <motion.h2 variants={textVariants}>Kumar Shivam,</motion.h2>
           <motion.h1 variants={textVariants}>
-            Problem Solver And Full Stack Developer
+            Hello! With skills in C++, I am venturing into Web Development
+            Frameworks. I’m always eager to learn new skills and stay updated
+            with the latest industry trends. Looking forward to connecting with
+            like-minded professionals and collaborating on exciting projects!
           </motion.h1>
           <motion.div className="buttons">
             <motion.button
@@ -81,7 +86,7 @@ const Hero = () => {
         Full Stack Developer AI Enthusiast Problem Solver
       </motion.div>
       <div className="imageContainer">
-        <img id="img" src="shivam_passport.jpeg" alt="#" />
+        <img id="img" src="code1.webp" alt="#" />
       </div>
     </div>
   );

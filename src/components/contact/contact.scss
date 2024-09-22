@@ -15,7 +15,23 @@
       h1 {
         font-size: 70px;
         line-height: 80px;
+        background: linear-gradient(to right, rgb(51, 13, 239), rgb(240, 106, 69), rgb(255, 255, 255));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: colorTransition 1.5s ease infinite; /* Add animation */
+        background-size: 200%; /* Make the gradient bigger for transition */
       }
+      
+      @keyframes colorTransition {
+        0% {
+          background-position: 0%;
+        }
+        100% {
+          background-position: 100%;
+        }
+      }
+      
       span {
         font-weight: 300;
         font-size: 30px;
@@ -49,6 +65,7 @@
         button {
           padding: 20px;
           border: none;
+          margin-left: 600px;
           background-color: rgb(9, 138, 189); // Initial color
           cursor: pointer;
           font-weight: 900;
