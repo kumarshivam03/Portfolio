@@ -39,7 +39,11 @@ const Navbar = () => {
             <img src="/twitter.webp" alt="" />
           </a>
 
-          <a href="www.instagram.com" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src="/instagram.png" alt="" />
           </a>
         </div>
