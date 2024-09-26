@@ -27,7 +27,7 @@ const items = [
   },
   {
     id: 4,
-    title: "Text-Editor: Javascript App",
+    title: "Text-Editor: Javascript Application",
     img: "https://imgs.search.brave.com/_Ndu0JPyTBsUwV0ZxU_OE6ytZnTAdfmtfvd5qjwO0pU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/YmVmdW5reS5jb20v/aW1hZ2VzL3ByaXNt/aWMvMDAwNTFjYWYt/ZjA0Yi00ZWUxLWJh/YjgtYjMyZmJlMDBm/N2FkX2hvdy10b190/ZXh0LWVkaXRvci0x/My5zdmc",
     desc: "The Text Editor App is a versatile and feature-rich text editing tool developed with JavaScript. It provides users with a robust platform for creating, editing, and managing text documents with ease. Designed with both simplicity and functionality in mind, the app offers a range of features to enhance the text editing experience.",
     repoLink: "https://github.com/kumarshivam03/Text-Editor",
