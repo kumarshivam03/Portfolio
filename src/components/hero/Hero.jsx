@@ -51,7 +51,7 @@ const Hero = () => {
           <motion.h2 variants={textVariants}>Kumar Shivam,</motion.h2>
           <motion.h1 variants={textVariants}>
             Hello! With skills in C++, I am venturing into Web Development
-            Frameworks. I’m always eager to learn new skills and stay updated
+            Frameworks. I'm always eager to learn new skills and stay updated
             with the latest industry trends. Looking forward to connecting with
             like-minded professionals and collaborating on exciting projects!
           </motion.h1>
@@ -60,7 +60,7 @@ const Hero = () => {
               variants={textVariants}
               onClick={() =>
                 window.open(
-                  "/KShivamResume.pdf",
+                  "https://drive.google.com/file/d/1gng7BqINkjeH56D8X_ZVnJxefCg5ZXc9/view",
                   "_blank",
                   "noopener,noreferrer"
                 )
