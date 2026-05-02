@@ -33,7 +33,7 @@ const Services = () => {
     >
       <motion.div className="textContainer" variants={variants}>
         <motion.h1 id="services" whileHover={{ color: "rgb(255, 165, 0)" }}>
-          Services...
+          Services
         </motion.h1>
       </motion.div>
       <motion.div className="titleContainer" variants={variants}>
@@ -71,8 +71,8 @@ const Services = () => {
                 {index === 0
                   ? "An adept problem solver leverages analytical thinking and creativity to tackle complex issues effectively. By breaking down problems into manageable components and utilizing a structured approach."
                   : index === 1
-                  ? "Frontend development focuses on creating the visual and interactive aspects of a website or application. It involves using HTML, CSS, and JavaScript to build responsive and user-friendly interfaces."
-                  : "Backend development involves managing the server-side logic and database interactions of a web application. It encompasses server setup, API development, and data handling to support the frontend."}
+                    ? "Frontend development focuses on creating the visual and interactive aspects of a website or application. It involves using HTML, CSS, and JavaScript to build responsive and user-friendly interfaces."
+                    : "Backend development involves managing the server-side logic and database interactions of a web application. It encompasses server setup, API development, and data handling to support the frontend."}
               </p>
               <button
                 className="goButton"
@@ -81,14 +81,14 @@ const Services = () => {
                     index === 0
                       ? "https://leetcode.com/u/Kshivam3127/"
                       : "https://github.com/kumarshivam03?tab=repositories",
-                    "_blank"
+                    "_blank",
                   )
                 }
               >
                 Check My Work
               </button>
             </motion.div>
-          )
+          ),
         )}
       </motion.div>
     </motion.div>
