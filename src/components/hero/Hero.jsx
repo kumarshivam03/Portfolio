@@ -60,7 +60,7 @@ const Hero = () => {
               variants={textVariants}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1KumHl1k6DdfGhZC1J0RLmClVKMvD4y1e/view?usp=sharing",
+                  "https://drive.google.com/file/d/10A27nVaV9x53dMIczsac5f35nFqtx1de/view?usp=sharing",
                   "_blank",
                   "noopener,noreferrer",
                 )
